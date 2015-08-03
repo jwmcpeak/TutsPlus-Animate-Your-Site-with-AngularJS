@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        @keyframes slide-in {
+            from { left: -200px; }
+            90% { left: 5px; }
+            to { left: 0; }
+        }
+
+        @keyframes slide-out {
+            from { left: 0; }
+            to { left: -200px; }
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            left: -200px;
+            top: 100px;
+        }
+
+        .box-show {
+            animation: slide-in .3s forwards;
+        }
+
+        .box-hide {
+            animation: slide-out .3s forwards;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="box-control">Box Control</a>
+    <div id="box" class="box"></div>
+    <script>
+        (function () {
+            var boxEl = document.getElementById("box");
+
+            document.getElementById("box-control").addEventListener("click", function (e) {
+                e.preventDefault();
+
+                if (boxEl.classList.contains("box-show") || boxEl.classList.contains("box-hide")) {
+                    boxEl.classList.toggle("box-hide");
+                }
+
+                boxEl.classList.toggle("box-show");
+            });
+
+        }());
+
+    </script>
+</body>
+</html>

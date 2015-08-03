@@ -1,0 +1,36 @@
+﻿/* ngClass */
+#sidebar-wrapper.open-add,
+#sidebar-wrapper.open-remove {
+    transition: all .2s;
+}
+
+#sidebar-wrapper.open-add-active {
+    margin-left: 0;
+    left: 0;
+}
+
+ng-view,
+[ng-view] {
+    position: absolute;
+    width: 100%;
+}
+
+/* ngView, ngInclude, ngIf, ngSwitch */
+ng-view.ng-enter,
+ng-view.ng-leave,
+[ng-view].ng-enter,
+[ng-view].ng-leave {
+    transition: opacity .5s;
+}
+
+ng-view.ng-leave-active,
+ng-view.ng-enter,
+[ng-view].ng-leave-active,
+[ng-view].ng-enter {
+    opacity: 0;
+}
+
+ng-view.ng-enter-active,
+[ng-view].ng-enter-active {
+    opacity: 1;
+}

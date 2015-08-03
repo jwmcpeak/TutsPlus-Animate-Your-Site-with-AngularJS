@@ -1,0 +1,112 @@
+﻿/* ngClass */
+#sidebar-wrapper.open-add,
+#sidebar-wrapper.open-remove {
+    transition: all .2s;
+}
+
+#sidebar-wrapper.open-add-active {
+    margin-left: 0;
+    left: 0;
+}
+
+ng-view,
+[ng-view] {
+    position: absolute;
+    width: 100%;
+}
+
+/* ngView, ngInclude, ngIf, ngSwitch */
+ng-view.ng-enter,
+ng-view.ng-leave,
+[ng-view].ng-enter,
+[ng-view].ng-leave {
+    transition: opacity .5s;
+}
+
+ng-view.ng-leave-active,
+ng-view.ng-enter,
+[ng-view].ng-leave-active,
+[ng-view].ng-enter {
+    opacity: 0;
+}
+
+ng-view.ng-enter-active,
+[ng-view].ng-enter-active {
+    opacity: 1;
+}
+
+/* ngRepeat */
+
+.posts.ng-enter,
+.posts.ng-leave {
+    transition: opacity .3s, margin-bottom .5s;
+}
+
+.posts.ng-enter,
+.posts.ng-leave-active {
+    opacity: 0;
+    margin-bottom: -188px;
+}
+
+.posts.ng-enter-active {
+    opacity: 1;
+    margin-bottom: 15px;
+}
+
+/*.ng-enter-stagger,
+.ng-leave-stagger {
+    transition-delay: .2s;
+    transition-duration: 0;
+}*/
+
+/* ngShow ngHide */
+#system-status {
+    position: absolute;
+    right: 25px;
+}
+
+#system-status.ng-hide-add,
+#system-status.ng-hide-remove {
+    transition: opacity 1s;
+}
+
+#system-status.ng-hide-add-active,
+#system-status.ng-hide-remove {
+    opacity: 0;
+}
+
+#system-status.ng-hide-remove-active {
+    opacity: 1;
+}
+
+/* Forms and ngMessages */
+.form-control {
+    border-width: 2px;
+    transition: all .3s;
+}
+
+.form-control.ng-invalid {
+    color: #b94a48;
+    border-color: #b94a48;
+}
+
+[ng-message].ng-enter,
+[ng-message].ng-leave {
+    transition: opacity .2s;
+}
+
+[ng-message].ng-enter {
+    opacity: 0;
+    margin-bottom: -52px;
+}
+
+[ng-message].ng-enter-active,
+[ng-message].ng-leave {
+    opacity: 1;
+    margin-bottom: 20px;
+}
+
+[ng-message].ng-leave-active {
+    opacity: 0;
+    margin-bottom: -52px;
+}

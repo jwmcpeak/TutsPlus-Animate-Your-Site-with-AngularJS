@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: -100px;
+            top: 100px;
+            transition: left .3s;
+        }
+
+        .box-show {
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="box-control">Box Control</a>
+    <div id="box" class="box"></div>
+    <script>
+        document.getElementById("box-control").addEventListener("click", function (e) {
+            e.preventDefault();
+
+            document.getElementById("box").classList.toggle("box-show");
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿/* ngClass */
+#sidebar-wrapper.open-add,
+#sidebar-wrapper.open-remove {
+    transition: all .2s;
+}
+
+#sidebar-wrapper.open-add-active {
+    margin-left: 0;
+    left: 0;
+}
+
+ng-view,
+[ng-view] {
+    position: absolute;
+    width: 100%;
+}
+
+/* ngView, ngInclude, ngIf, ngSwitch */
+ng-view.ng-enter,
+ng-view.ng-leave,
+[ng-view].ng-enter,
+[ng-view].ng-leave {
+    transition: opacity .5s;
+}
+
+ng-view.ng-leave-active,
+ng-view.ng-enter,
+[ng-view].ng-leave-active,
+[ng-view].ng-enter {
+    opacity: 0;
+}
+
+ng-view.ng-enter-active,
+[ng-view].ng-enter-active {
+    opacity: 1;
+}
+
+/* ngRepeat */
+
+.posts.ng-enter,
+.posts.ng-leave {
+    transition: opacity .3s, margin-bottom .5s;
+}
+
+.posts.ng-enter,
+.posts.ng-leave-active {
+    opacity: 0;
+    margin-bottom: -188px;
+}
+
+.posts.ng-enter-active {
+    opacity: 1;
+    margin-bottom: 15px;
+}
+
+/*.ng-enter-stagger,
+.ng-leave-stagger {
+    transition-delay: .2s;
+    transition-duration: 0;
+}*/

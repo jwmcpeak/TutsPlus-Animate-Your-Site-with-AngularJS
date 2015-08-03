@@ -1,0 +1,10 @@
+﻿#sidebar-wrapper.open-add,
+#sidebar-wrapper.open-remove {
+
+    transition: all .2s;
+}
+
+#sidebar-wrapper.open-add-active {
+    margin-left: 0;
+    left: 0;
+}
